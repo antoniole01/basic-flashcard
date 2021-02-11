@@ -1,0 +1,54 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~1:Index
+#Front
+
+
+1. how to design a house
+2. how to build a house
+
+
+#/Front
+#Back
+
+
+1. just do it
+2. i don't know
+
+
+#/Back
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~2:Index
+#Front
+
+
+how to change your pants is nice
+
+
+#/Front
+#Back
+
+
+1. put left leg first, then right leg, and don't fall.
+2. put on your head
+
+
+#/Back
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~3:Index
+#Front
+#/Front
+#Back
+#/Back
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~3:Index
+#Front
+#/Front
+#Back
+#/Back
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~3:Index
+#Front
+
+test
+
+#/Front
+#Back
+
+ ~this is the back~
+
+#/Back
