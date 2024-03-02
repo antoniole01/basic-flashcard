@@ -1,3 +1,6 @@
+// windows api headers
+// not used unless calling windows directly
+
 #ifndef MAIN_H
 #define MAIN_H
 

@@ -1,3 +1,7 @@
+// test main file
+// all code goes here
+// to load dynamically
+
 #include <windows.h>
 #include <iostream>
 #include <stdio.h>
