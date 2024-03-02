@@ -1,0 +1,640 @@
+
+Flower and their rate of Decay.
+
+1.
+2.
+3.
+4.
+5.
+
+
+All Quiz Question
+
+Midterm I
+
+Question 1
+3.5 / 3.5 pts
+
+Which of the following is a correct distinction between discovery science and hypothesis-driven science?
+ 
+Correct!
+  * Discovery science is mostly about describing nature, whereas hypothesis-driven science tries to explain nature.
+  Hypothesis-driven science is more important than discovery science.
+  Discovery science involves predictions about outcomes, whereas hypothesis-driven science involves tentative answers to specific questions.
+  Discovery science "discovers" new knowledge, whereas hypothesis-driven science does not.
+ 
+Question 2
+0 / 3.5 pts
+
+ Which of the following is an example of hypothesis-driven science?
+You Answered
+  Jane Goodall¡¯s detailed documentation of chimpanzee behavior.
+  Finding and describing a new plant.
+Correct Answer
+  * Testing a hypothesis by Einstein that light could be bent or moved by gravity.
+  Recording the water temperature off the CA coast over the course of a year.
+ 
+Question 3
+3.5 / 3.5 pts
+ All of the following are properties of ALL living things EXCEPT:
+  reproduction.
+  having an ordered structure.
+  growth and development.
+Correct!
+  having eyes
+ 
+Question 4
+3 / 3 pts
+ Starch and glycogen are examples of:
+  lipids
+Correct!
+  carbohydrates
+  nucleic acids.
+  amino acids.
+ 
+Question 5
+3 / 3 pts
+The attraction between neighboring water molecules is called a(an):
+Correct!
+  hydrogen bond.
+  double bond.
+  water bond.
+  oxygen bond
+ 
+Question 6
+3 / 3 pts
+
+Mass number and atomic number of ¡± P¡± is 31 and 15 respectively, how many neutrons and protons are there in an atom of P?
+
+ 
+  15 neutrons and 31 protons
+  31 neutrons and 15 protons
+  15 neutrons and 16 protons
+Correct!
+  16 neutrons and 15 protons
+ 
+Question 7
+3 / 3 pts
+Osmosis:
+Correct!
+  is the passive transport of water across a membrane.
+  requires the cell to spend energy.
+  can transport molecules from low concentration to high concentration.
+  uses ATP as an energy source.
+ 
+Question 8
+3.5 / 3.5 pts
+If the solution surrounding a cell has a lower concentration of dissolved molecules than the cell, the solution is __________ to the cell.
+  isotonic
+  hypertonic
+  nucleotonic
+Correct!
+  hypotonic
+ 
+Question 9
+3.5 / 3.5 pts
+A stable carbon atom has an atomic mass of 12, while the isotope used in carbon dating has an atomic mass of 14. What is the atomic difference between Carbon 12 and Carbon 14?
+  number of electrons
+Correct!
+  number of neutrons
+  number of protons
+  number of atoms
+ 
+Question 10
+0 / 3.5 pts
+Saturated fats have double bonds that form kinks in their tails and are liquid at room temperature.
+You Answered
+  True
+Correct Answer
+  False
+ 
+Question 11
+3.5 / 3.5 pts
+Exocytosis refers to the bulk movement of molecules into a cell.
+  True
+Correct!
+  False
+ 
+Question 12
+3.5 / 3.5 pts
+An acid releases excess H+ ions to a solution and has a pH lower than 7.
+Correct!
+  True
+  False
+ 
+Question 13
+3.5 / 3.5 pts
+What is the definition of Equilibrium?
+  the process that brings LARGE particles INTO the cell through the cell membrane
+  The movement of molecules from an area of high concentration (where the molecules are more crowded together) to a area of low concentration (where molecules are more spread apart)
+Correct!
+  the state where molecules are equally concentrated (balanced) on both sides of the cell membrane.
+  the process that brings SMALL particles INTO the cell through the cell membrane
+ 
+Question 14
+0 / 3.5 pts
+Alcohol dehydrogenase is an enzyme that detoxifies alcohol in the body¡¯s liver. The main organelle that helps with this detoxification process is the ___________________________.
+  Golgi body
+  chloroplast
+You Answered
+  mitochondria
+Correct Answer
+  smooth endoplasmic reticulum (ER)
+ 
+Question 15
+0 / 3.5 pts
+Which one is not a characteristic of prokaryotes?
+  prokaryotes have cytoplasm
+You Answered
+  prokaryotes Lack membrane bound organelles
+  prokaryotes have DNA
+Correct Answer
+  prokaryotes have nucleus
+  prokaryotes have cell membrane
+ 
+Question 16
+3.5 / 3.5 pts
+The brain uses approximately 50% of the sugar consumed by a person each day. It is therefore reasonable to assume that nerve cells would contain a large amount of ________________.
+Correct!
+  mitochondria
+  ribosomes
+  rough endoplasmic reticulum (ER)
+  Golgi body
+ 
+Question 17
+3.5 / 3.5 pts
+Glycolysis occurs in the ____________ of the cell.
+Correct!
+  Cytoplasm
+  Mitochondria
+  Nucleus
+  endoplasmic reticulum
+ 
+Question 18
+3.5 / 3.5 pts
+Which of the following lists the reactions of cellular respiration in the correct order?
+  Pyruvate oxidation; Krebs (citric acid) cycle; electron transport chain; glycolysis
+  Krebs (citric acid) cycle; glycolysis; Pyruvate oxidation; electron transport chain
+Correct!
+  glycolysis; Pyruvate oxidation, Krebs (citric acid) cycle; electron transport chain
+  electron transport chain; glycolysis; Krebs (citric acid) cycle; Pyruvate oxidation
+ 
+Question 19
+3.5 / 3.5 pts
+Which of the following are produced during cellular respiration?
+  oxygen and glucose
+  carbon dioxide and ATP
+  ATP and water
+Correct!
+  carbon dioxide, water, and ATP
+ 
+Question 20
+3.5 / 3.5 pts
+Electron transport takes place in the ______. 
+  cytoplasm
+  mitochondria outer membrane
+Correct!
+  mitochondria inner membrane
+  chloroplasts
+ 
+Question 21
+3.5 / 3.5 pts
+Human muscle cells use lactic acid fermentation to------
+  regenerate NADH.
+  produce more ATP than is possible through aerobic respiration.
+  produce ATP using the electron transport chain.
+Correct!
+  produce ATP without O2.
+ 
+Question 22
+3.5 / 3.5 pts
+Plant cells ______.
+  use carbon dioxide but do not use oxygen
+  do not need mitochondria because their chloroplasts meet their energy need
+  do not need chloroplasts because their mitochondria meet their energy needs
+Correct!
+  have chloroplasts and mitochondria
+ 
+Question 23
+3.5 / 3.5 pts
+
+Which of these equations describes aerobic cellular respiration?
+Correct Answer
+ 
+ 
+  glucose ¡ú lactic acid + energy
+  None of these choices
+Correct!
+  glucose + oxygen ¡ú carbon dioxide + water + energy
+  energy + carbon dioxide + water ¡ú glucose + oxygen + water
+ 
+Question 24
+3.5 / 3.5 pts
+
+Which of the following is an autotroph?
+Correct Answer
+ 
+ 
+  elephant
+Correct!
+  pine tree
+  human
+  fish
+ 
+Question 25
+6 / 18 pts
+
+Select the right answer from dropdown:
+
+This organelle functions to package and deliver proteins []
+
+This organelle is the  site where cells synthesize lipids and detoxify drugs []
+
+This organelle is site where cells synthesize proteins []
+
+These organelles were formed through cell evolution by endosymbiosis []
+
+This organelle is the site or ribosome assembly []
+
+This organelle is the powerhouse of the cell []
+You Answered
+This organelle functions to package and deliver proteins
+ 
+ 
+ 
+Correct Answer Golgi apparatus
+You Answered
+This organelle is the  site where cells synthesize lipids and detoxify drugs
+ 
+ 
+ 
+Correct Answer Smooth ER
+You Answered
+This organelle is site where cells synthesize proteins
+ 
+ 
+ 
+Correct Answer Rough ER
+Correct!
+These organelles were formed through cell evolution by endosymbiosis
+ 
+You Answered
+This organelle is the site or ribosome assembly
+ 
+ 
+ 
+Correct Answer nucleolus
+Correct!
+This organelle is the powerhouse of the cell
+ 
+ 
+Question 26
+3.5 / 3.5 pts
+High fructose corn syrup is made from processed corn starch containing fructose and glucose.
+Correct!
+  True
+  False
+ 
+Question 27
+3 / 3 pts
+Ice floats because it is more dense than liquid water. 
+  True
+Correct!
+  False
+ 
+Question 28
+0 / 3.5 pts
+
+Which complex carbohydrate is produced by animal cells and stored in the liver by humans? 
+Correct Answer
+  glycogen
+You Answered
+  starch
+  cellulose
+  Keratin
+ 
+Question 29
+3.5 / 3.5 pts
+Which of the following lists the levels of biological organization in increasing order (smallest ->largest)?
+  cell, tissue, organism, organ system, community, population
+Correct!
+  cell, tissue, organ system, organism, population, community
+  tissue , cell, organ system, organism, community, population
+  tissue, cell, organism, organ system, population, community
+ 
+Question 30
+3.5 / 3.5 pts
+A section of DNA has the sequence AATGGCTAT. What is the complementary DNA sequence?
+Correct!
+  TTACCGATA
+  UUGAACGUA
+  UUACCGAUA
+  TTUCCGUTU
+ 
+Question 31
+12 / 12 pts
+
+Identify different part of this bacteria:
+
+Screen Shot 2022-03-12 at 1.49.25 PM.png
+Correct!
+E DNA
+ 
+Correct!
+D CYTOPLASM
+ 
+Correct!
+F FLAGELLA
+ 
+Correct!
+C CELL MEMBRANE
+ 
+ 
+Question 32
+0 / 3.5 pts
+Facilitated diffusion across a biological membrane requires an input of energy.
+You Answered
+  True
+Correct Answer
+  False
+ 
+Question 33
+0 / 3.5 pts
+Diffusion is an example of ______.
+  pinocytosis
+  endocytosis
+  exocytosis
+Correct Answer
+  passive transport
+You Answered
+  active transport
+  phagocytosis
+ 
+Question 34
+3.5 / 3.5 pts
+A cell that neither gains nor loses water when it is immersed in a solution is ______.
+
+  hypotonic to its environment
+  hypertonic to its environment
+Correct!
+  isotonic to its environment
+  lacking a plasma membrane
+  lacking water
+ 
+Question 35
+3.5 / 3.5 pts
+Where in the cell does glycolysis occur?
+  endoplasmic reticulum inside the inner mitochondrial membrane between the inner and outer mitochondrial membranes cytoplasm on the outside of the cell membrane
+  between the inner and outer mitochondrial membranes
+Correct!
+  cytoplasm
+  inside the inner mitochondrial membrane
+ 
+Question 36
+0 / 3.5 pts
+
+You observe a cell that has both a nucleus and a cell wall. Therefore, you conclude that it must be which type of cell?
+Correct Answer
+  plant
+  bacterial
+You Answered
+  prokaryotic
+  animal
+ 
+Question 37
+3.5 / 3.5 pts
+Which macromolecule is denatured by the prolonged high temperatures of a fever? 
+Correct!
+  proteins
+  nucleic acids
+  lipids
+  carbohydrates
+Quiz Score: 110 out of 150
+Submission Details:
+Time: 	55 minutes
+Current Score: 	110 out of 150
+Kept Score: 	110 out of 150
+
+
+
+
+
+
+
+
+
+
+Lab 6 quiz
+  Attempt   Time  Score
+LATEST  Attempt 1   7 minutes   7 out of 10
+Score for this quiz: 7 out of 10
+ 
+Question 1
+2 / 2 pts
+Which of the following is the correct equation for PHOTOSYNTHESIS?
+  CO2 + O2 + H2O --> Light+ glucose
+  O2 + light + H2O --> CO2 + glucose
+  *CO2 + light + H2O --> O2 + glucose
+  CO2 + glucose + H2O --> O2 + light
+ 
+IncorrectQuestion 2
+0 / 2 pts
+ What is the green pigment that absorbs light called?
+  Chlorophyll
+  Photosynthesis
+  *Chloroplast
+  Photosystem
+ 
+Question 3
+2 / 2 pts
+We use mealworm today to measure the amount of.....
+  Fermentation
+  No answer text provided.
+  *Respiration
+  photosynthesis
+ 
+PartialQuestion 4
+1 / 2 pts
+We use phenol red to.... (you can pick more than one option).
+  Check the rate of photosynthesis
+  To measure how much O2 is being produced via photosynthesis
+  All of these options are correct
+  Check how much CO2 is being used by Elodea
+ 
+Question 5
+2 / 2 pts
+We use chromatography to separate the pigments on a spinach leaf today.
+  *True
+  False
+
+
+
+
+
+
+
+
+Lab 5 -microscopy quiz
+
+    Due Jun 27 at 10:45am Points 10 Questions 5 Available Jun 27 at 10:30am - Jun 27 at 10:45am 15 minutes Time Limit 10 Minutes 
+
+This quiz was locked Jun 27 at 10:45am.
+Attempt History
+  Attempt   Time  Score
+LATEST  Attempt 1   4 minutes   6 out of 10
+Score for this quiz: 6 out of 10
+Submitted Jun 27 at 10:39am
+This attempt took 4 minutes.
+ 
+Question 1
+0 / 2 pts
+When using the compound microscope, which objective lens should you use first to locate the specimen?
+  oil immersion
+  high
+Correct Answer
+  Low scanning
+You Answered
+  medium
+ 
+Question 2
+0 / 2 pts
+f the total magnification of the object being viewed is 100X, what is the magnification of the objective lens that is being used?
+  4X
+  1000X
+You Answered
+  100X
+Correct Answer
+  10X
+ 
+Question 3
+2 / 2 pts
+Which of the following objective lenses would show the smallest field of view?
+  4X
+Correct!
+  40X
+  10X
+  No answer text provided.
+ 
+Question 4
+2 / 2 pts
+Identify which kind of specimen is best viewed under each type of microscope.
+compound (light) microscope  Small, thiner specimen
+dissecting microscope  Large, thicker specimen
+Answer 1:
+Correct!
+Small, thiner specimen
+Answer 2:
+Correct!
+Large, thicker specimen
+ 
+Question 5
+2 / 2 pts
+
+Match the names of the numbered microscope parts.
+
+Screen Shot 2022-10-20 at 11.07.54 AM-1.png
+
+1.     Ocular lens
+3.    Objective lens
+
+Answer 1:
+Correct!
+Ocular lens
+Answer 2:
+Correct!
+Objective lens
+
+Quiz Score: 6 out of 10
+
+--------------------
+Quiz 7. Development
+ 
+IncorrectQuestion 1
+0 / 2 pts
+A cell that completed the cell cycle without undergoing cytokinesis would ______.
+  have its chromosomes lined up in the middle of the cell
+  not have completed anaphase
+  * have two nuclei
+  have less genetic material than it started with
+ 
+IncorrectQuestion 2
+0 / 2 pts
+Mitosis occurs in somatic cells and meiosis occurs only in germ cells.
+  * True
+  False
+ 
+PartialQuestion 3
+1 / 2 pts
+Which of the following statements is correct?  Select ALL that apply.
+  * A diploid cell has two copies of each chromosome.
+  * Gametes are reproductive cells that are haploid.
+  Homologous chromosomes are 100% identical because they originate from the same parent.
+  Human somatic cells are haploid
+ 
+PartialQuestion 4
+Original Score: 0.67 / 2 pts Regraded Score: 2 / 2 pts
+This question has been regraded.
+A child has blood type A and the mother has type O. What are the possible genotypes of the father?  Choose all that apply.
+  OO
+  *AB
+  *AA
+  BO
+  BB
+  *AO
+ 
+Question 5
+2 / 2 pts
+Today we are going to extract DNA from which plant:
+  * Strawberry
+  Apple
+  Onion
+  Wheat
+  
+----------------
+BIOL100-10494 [LAB]QuizzesQuiz 8- Genetics
+
+What is the complementary DNA sequence for this sequence?
+ATGGCAAT
+  ATGGCAAT
+Correct!
+  * TACCGTTA
+  TACCGTTT
+  AUGGCAAU
+ 
+Question 2
+0 / 2 pts
+Suppose a man is blood type O. From this, we can infer that...
+You Answered
+  at least one of his parents must be type O.
+  his daughters must be type O.
+  his sons must be type O.
+Correct Answer
+  none of his children can be type AB.
+  none of his children can be type B.
+ 
+Question 3
+0 / 2 pts
+A woman with an B blood group and a man with an A blood group have a child with an O blood group. Is the man the real father?
+  Yes
+You Answered
+  No
+Correct Answer
+  It is possible!
+
+Question 4
+2 / 2 pts
+When a trait skip a generation what does that mean?
+  It is be controlled by a dominant allele
+Correct!
+  It is be controlled by a recessive allele
+ 
+Question 5
+0 / 2 pts
+Recessive alleles have more tendency to stay in the population.
+Correct Answer
+  True
+You Answered
+  False
+
+
+  229646658

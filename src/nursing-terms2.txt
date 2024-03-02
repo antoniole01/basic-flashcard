@@ -1,0 +1,450 @@
+**Nursing Education
+
+ ~
+-------------------Acronym
+--------------------------
+--------------------------
+
+--------------------------
+
+ ~
+a
+
+before (ante)
+
+ ~
+CHF
+
+congestive heart failure
+
+ ~
+A&O
+
+alert and oriented
+
+ ~
+CNS
+
+central nervous system
+
+ ~
+ABG
+
+arterial blood gasses
+
+ ~
+COPD
+
+Chronic Obstructive Pulmonary disease
+
+ ~
+ac
+
+before meals
+
+ ~
+CPR
+
+cardiopulmonary resuscitation
+
+ ~
+AD
+
+right ear
+
+ ~
+CSF
+
+cerebral spinal fluid
+
+ ~
+ad lib
+
+as desired
+
+ ~
+CT
+
+cat scan
+
+ ~
+ADL
+
+activity of daily living
+
+ ~
+CVA
+
+cerebrovascular accident (stroke)
+
+ ~
+AEB
+
+as evidenced by
+
+ ~
+CXR
+
+chest x ray
+
+ ~
+AKA
+
+above the knee amputation
+
+ ~
+D/C
+
+discharge
+
+ ~
+AMA
+
+against medical advice
+
+ ~
+DM
+
+Diabetes Mellitus
+
+ ~
+amb
+
+ambulatory
+
+ ~
+DNR
+
+do not resuscitate
+
+ ~
+AP
+
+apical pulse
+
+ ~
+DOA
+
+dead on arrival
+
+ ~
+AS
+
+left ear
+
+ ~
+DOB
+
+date of birth
+
+ ~
+ASA
+
+aspirin
+
+ ~
+drsg
+
+dressing
+
+ ~
+ASAP
+
+as soon as possible
+
+ ~
+DVT
+
+deep vein thrombosis
+
+ ~
+AU
+
+both ears
+
+ ~
+Dx
+
+diagnosis
+
+ ~
+AWOL
+
+absence without leave
+
+ ~
+ECT
+
+electroconvulsive therapy
+
+ ~
+bid
+
+Twice a day
+
+ ~
+ED/ER
+
+emergency room
+
+ ~
+BM
+
+bowel movement
+
+ ~
+EEG
+
+electroencephalogram
+
+ ~
+BPH
+
+benign prostatic hypertrophy
+
+ ~
+EENT
+
+eyes, ears, nose & throat
+
+ ~
+BR
+
+bedrest
+
+ ~
+EHR
+
+electronic health record
+
+ ~
+BRP
+
+bathroom privileges
+
+ ~
+EKG
+
+electrocardiogram
+
+ ~
+BS
+
+blood sugar
+
+ ~
+EMR
+
+electronic medical record
+
+ ~
+BSC
+
+bedside commode
+
+ ~
+EMS
+
+emergency medical services
+
+ ~
+c
+
+with
+
+ ~
+ENT
+
+ears, nose & throat
+
+ ~
+c/o
+
+complains of
+
+ ~
+ETOH
+
+alcohol
+
+ ~
+cal
+
+calorie
+
+ ~
+FBS
+
+fasting blood sugar
+
+ ~
+CAM
+
+Complementary Alternative Method
+
+ ~
+Fx
+
+fracture
+
+ ~
+cap
+
+capsule
+
+ ~
+GERD
+
+gastro esophageal reflux
+
+ ~
+CBC
+
+complete Blood Count
+
+ ~
+GI
+
+gastrointestinal
+
+ ~
+cc
+
+chief complaint
+
+ ~
+gtts
+
+drops
+
+ ~
+CHD
+
+coronary heart disease
+
+ ~
+GU
+
+genitourinary
+
+ ~
+GYN
+
+gynecology
+
+ ~
+MRSA
+
+methillin resistant staphylococcus aureaus
+
+ ~
+h
+
+hour
+
+ ~
+N/V
+
+nausea and vomiting
+
+ ~
+H&H
+
+hemoglobin & hematocrit
+
+ ~
+NAS
+
+no added salt
+
+ ~
+H&P
+
+History and Physical
+
+ ~
+NG
+
+nasogastric
+
+ ~
+h/o
+
+History of
+
+ ~
+NGT
+
+nasogastric tube
+
+ ~
+HgB
+
+hemoglobin
+
+ ~
+NKA
+
+no known allergies
+
+ ~
+HCT
+
+hematocrit
+
+ ~
+noc
+
+at night
+
+ ~
+HDL
+
+high density lipoprotein
+
+ ~
+NPO
+
+nothing by mouth
+
+ ~
+HOB
+
+head of bed
+
+ ~
+NSAID
+
+non-steroidal anti-inflammatory drugs
+
+ ~
+HOH
+
+Hard of hearing
+
+ ~
+O2
+
+oxygen
+
+ ~
+HR
+
+heart rate
+
+ ~
+OD
+
+right eye
+
+ ~
+hs
+
+at bedtime or hour of sleep
+
+ ~
+end
+
+end
+
+ ~

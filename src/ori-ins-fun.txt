@@ -1,0 +1,315 @@
+**AP-Muscle Origin Insertion Function
+
+ ~
+-----muscles of fascia expression
+---------------
+---------------
+
+---------------
+
+ ~
+epicranius
+frontal belly to occipitofrontalis
+occipital belly to occipitofrontalis
+
+raises eyebrows wrinkles forehead
+retracts scalp
+
+ ~
+Buccinator
+
+Compresses cheeks "suck", trumpet blowing
+
+ ~
+Orbicularis Oculi
+
+eyelids close, (wink, blink, squint)
+
+ ~
+Zygomatic Minor
+
+Smile, elevates corners of mouth
+
+ ~
+Zygomatic Major
+
+Smile, elevates corners of mouth
+
+ ~
+Orbicularis Oris
+
+close/pucker mouth, kiss
+
+ ~
+-----muscles of mastification
+----------------
+----------------
+
+----------------
+
+ ~
+temporalis
+
+o:parietal bone superior, inferior temporal line
+i:coronoid process of mandible
+f:elevates/retracts the mandible
+
+ ~
+masseter
+
+o:zygomatic arch
+i:ramus(lat. surface) angle of mandible
+f:elevates/protracts the mandible, prime mover of jaw closure
+
+ ~
+-----muscles that move the head and neck
+--------------
+--------------
+
+--------------
+
+ ~
+sternocleidomastoid
+
+o:mastoid process of temporal bone
+i:manubrium and sternal end of clavicle
+f:bilateral contraction - flexion of neck,
+  unilateral contraction - lateral flexion of neck
+  rotation of neck
+
+ ~
+scalene muscles
+
+o:transverse process of cervical vertebrae
+i:ribs 1 and 2, superior surface
+f:flex neck
+
+ ~
+-------muscles that move the vertebral column
+---------------
+---------------
+---------------
+
+---------------
+
+ ~
+Erector Spinae Group
+
+f:maintain posture
+  bilateral contractions - extends the spinal column
+  unilateral contractions - flexes the column laterally
+
+ ~
+--------------respiration
+-------------------------
+-------------------------
+
+-------------------------
+
+ ~
+scalene muscles
+
+elevates ribs 1 and 2
+
+ ~
+external intercostals
+
+elevates ribs during inhalation
+
+ ~
+internal intercostals
+
+depresses ribs during forced exhalation - antagonist of external intercostals
+
+ ~
+transverse thoracis
+
+depresses ribs during forced exhalation
+
+ ~
+diaphragm
+
+the major muscles of respiration
+ contraction causes flattening of diaphragm (moves inferiorily), and thus
+ expasion of thorasic cavity, increases pressure in abdominopelvic cavity
+
+ ~
+------muscles of the abdominal cavity
+------------
+------------
+
+------------
+
+ ~
+external oblique
+
+unilateral action - lateral flexion of the vertebral column:
+                    rotation of vertebral column to opposite side
+bilateral action - flexes vertebral column and compresses abdominal wall:
+                    used in forced exhalation
+
+ ~
+internal oblique
+
+unilateral action - lateral flexion of the vertebral column:
+                     rotation of vertebral column to same side
+bilateral action - flexes vertebral column and compresses abdominal wall:
+                    used in forced exhalation
+
+ ~
+transverse abdominus
+
+bilater action - compresses abdominal wall used in forced exhalation
+
+ ~
+-----muscles that move the pectoral girdle
+---------
+---------
+
+---------
+
+ ~
+serratus anterior
+
+o:rib 1-8 anterior/superior margin
+i:medial border of scapula, anterior surface
+f:agonist in scapula protraction
+
+ ~
+-----muscles that move the glenohumeral joint
+---------
+---------
+
+---------
+
+ ~
+latissimus dorsi
+
+o:spinous process of t7-t12
+i:intertubercular sulcus of the humerous
+f:agonist of the arm extension
+
+ ~
+pectoralis major
+
+o:body of sternum, ribs, clavicle
+i:intertubercular sulcus of the humerous
+f:agonist of the arm flexion also adducts/medially rotates arm
+
+ ~
+deltoid
+
+o:clavicle acromion and spine of scapula
+i:deltoid tuberosity of (humerous)
+f:arm middle fibers: agonist of arm abduction
+
+ ~
+biceps brachii
+
+o:scapula
+i:radialis
+f:flexes arm(weakly)
+
+ ~
+-----muscles of the arm/forearm that move the elbow/forearm
+---------
+---------
+
+---------
+
+ ~
+brachialis
+
+o:humerous
+i:coronoid process of ulna
+f:flexes forearm
+
+ ~
+triceps brachii
+
+o:scapula, humerous
+i:olecranon of ulna, radial groove, to radial groove
+f:extends forearm
+
+ ~
+pronator teres
+
+pronates forearm
+
+ ~
+supinator
+
+supinates forearm
+
+ ~
+-----muscles that move hip joint/thigh
+---------
+---------
+
+---------
+
+ ~
+rectus femoris
+
+o:anterior inferior iliac spine
+i:quadriceps tendon to patella and then patellar ligaments to tibial
+ tuberosity
+f: flexes thigh, external leg
+
+ ~
+tensor fasciae latae
+
+o:iliac crest
+i:iliotibial band
+f:abducts thigh
+
+ ~
+gluteus maximus
+
+o:iliac crest, sacrum, coccyx
+i:linea aspera and gluteal tuberosity of femur
+f:extends thigh
+
+ ~
+adductor brevis
+
+adducts thigh
+
+ ~
+adductor longus
+
+adducts thigh
+
+ ~
+adductor magnus
+
+adducts thigh
+
+ ~
+biceps femoris
+
+extends thigh flexes leg(short head)
+
+ ~
+semimembranosus
+
+extends thigh and flexes leg
+
+ ~
+semitendinosus
+
+extends thigh and flexes leg
+
+ ~
+gastrocnemius
+
+o:superior posterior surface of lateral and medial condyles of femur
+i:calcaneus via calcaneal tendon
+f:flexes leg and planter flexes foot
+
+ ~
+end
+
+end
+
+ ~

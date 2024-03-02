@@ -1,2 +1,0 @@
-# basic-flashcard
-basic flashcard

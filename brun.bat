@@ -10,15 +10,16 @@ set CommonLinkerFlags= -incremental:no -opt:ref user32.lib gdi32.lib winmm.lib S
 IF NOT EXIST build mkdir build
 pushd build
 
+
 IF EXIST *.exe del *.exe > NUL 2> NUL
 IF EXIST *.pdb del *.pdb > NUL 2> NUL
 
 rem  /SUBSYSTEM:WINDOW
 
-cl %CommonCompilerFlags% ../test.cpp "c:/z/cpp/sdl remake/_MI/Window.cpp" "c:/z/cpp/sdl remake/_MI/LTexture.cpp" -Fmtest.map /LD /link %CommonLinkerFlags% -PDB:test_%date:~-4,4%%date:~-10,2%%date:~-7,2%_%time:~3,2%%time:~6,2%.pdb -EXPORT:GameUpdateAndRender
-cl %CommonCompilerFlags% ../main.cpp "c:/z/cpp/sdl remake/_MI/Window.cpp" "c:/z/cpp/sdl remake/_MI/LTexture.cpp" -Fmmain.map /link %CommonLinkerFlags%
+cl %CommonCompilerFlags% ../test.cpp c:/z/_MI/Window.cpp c:/z/_MI/LTexture.cpp -Fmtest.map /LD /link %CommonLinkerFlags% -PDB:test_%date:~-4,4%%date:~-10,2%%date:~-7,2%_%time:~3,2%%time:~6,2%.pdb -EXPORT:GameUpdateAndRender
+cl %CommonCompilerFlags% ../main.cpp c:/z/_MI/Window.cpp c:/z/_MI/LTexture.cpp -Fmmain.map /link %CommonLinkerFlags%
 
-IF ERRORLEVEL 0 start "New Window" cmd /c main.exe popd IF NOT popd
+rem IF ERRORLEVEL 0 start "New Window" cmd /c main.exe popd IF NOT popd
 rem main.exe
 
 popd

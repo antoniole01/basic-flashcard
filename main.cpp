@@ -41,11 +41,9 @@ struct win32_state{
 };
 
 global_variable bool32 GlobalRunning;
-
 global_variable win32_offscreen_buffer GlobalBackbuffer;
 
-internal void
-CatStrings(size_t SourceACount, char *SourceA, size_t SourceBCount, char *SourceB, size_t DestCount, char *Dest){
+internal void CatStrings(size_t SourceACount, char *SourceA, size_t SourceBCount, char *SourceB, size_t DestCount, char *Dest){
    for(int Index = 0;Index < (int)SourceACount;++Index){
       *Dest++ = *SourceA++;
    }
@@ -55,8 +53,7 @@ CatStrings(size_t SourceACount, char *SourceA, size_t SourceBCount, char *Source
    *Dest++ = 0;
 }
 
-internal void
-Win32GetEXEFileName(win32_state *State){
+internal void Win32GetEXEFileName(win32_state *State){
    DWORD SizeOfFilename = GetModuleFileNameA(0, State->EXEFileName, sizeof(State->EXEFileName));
    State->OnePastLastEXEFileNameSlash = State->EXEFileName;
    for(char *Scan = State->EXEFileName;*Scan;++Scan){
@@ -66,8 +63,7 @@ Win32GetEXEFileName(win32_state *State){
    }
 }
 
-internal int
-StringLength(char *String){
+internal int StringLength(char *String){
    int Count = 0;
    while(*String++){
       ++Count;
@@ -75,27 +71,23 @@ StringLength(char *String){
    return(Count);
 }
 
-internal void
-Win32BuildEXEPathFileName(win32_state *State, char *FileName, int DestCount, char *Dest){
+internal void Win32BuildEXEPathFileName(win32_state *State, char *FileName, int DestCount, char *Dest){
    CatStrings(State->OnePastLastEXEFileNameSlash - State->EXEFileName, State->EXEFileName,
 				  StringLength(FileName), FileName,
 				  DestCount, Dest);
 }
 
-inline FILETIME
-Win32GetLastWriteTime(char *Filename){
+inline FILETIME Win32GetLastWriteTime(char *Filename){
    FILETIME LastWriteTime = {};
 
    WIN32_FILE_ATTRIBUTE_DATA Data;
    if(GetFileAttributesEx(Filename, GetFileExInfoStandard, &Data)){
       LastWriteTime = Data.ftLastWriteTime;
    }
-
    return(LastWriteTime);
 }
 
-internal win32_game_code
-Win32LoadGameCode(char *SourceDLLName, char *TempDLLName){
+internal win32_game_code Win32LoadGameCode(char *SourceDLLName, char *TempDLLName){
    win32_game_code Result = {};
 
    Result.DLLLastWriteTime = Win32GetLastWriteTime(SourceDLLName);
@@ -116,8 +108,7 @@ Win32LoadGameCode(char *SourceDLLName, char *TempDLLName){
    return(Result);
 }
 
-internal void
-Win32UnloadGameCode(win32_game_code *GameCode){
+internal void Win32UnloadGameCode(win32_game_code *GameCode){
    if(GameCode->GameCodeDLL){
       FreeLibrary(GameCode->GameCodeDLL);
       GameCode->GameCodeDLL = 0;
@@ -127,9 +118,7 @@ Win32UnloadGameCode(win32_game_code *GameCode){
    GameCode->UpdateAndRender = 0;
 }
 
-int main()
-{
-	
+int main(){
    win32_state Win32State = {};
    Win32GetEXEFileName(&Win32State);
 
@@ -143,21 +132,17 @@ int main()
    win32_game_code Game = Win32LoadGameCode(SourceGameCodeDLLFullPath, TempGameCodeDLLFullPath);
    uint32 LoadCounter = 0;
 	
-   while(GlobalRunning)
-   {
+   while(GlobalRunning){
 		
       FILETIME NewDLLWriteTime = Win32GetLastWriteTime(SourceGameCodeDLLFullPath);
-      if(CompareFileTime(&NewDLLWriteTime, &Game.DLLLastWriteTime) != 0)
-      {
+      if(CompareFileTime(&NewDLLWriteTime, &Game.DLLLastWriteTime) != 0){
 			Win32UnloadGameCode(&Game);
 			Game = Win32LoadGameCode(SourceGameCodeDLLFullPath,TempGameCodeDLLFullPath);
 
 			LoadCounter = 0;
       }
 
-		//
 		//NOTE:me disable this to not receive quit input
-		
       // if(GetAsyncKeyState(VK_ESCAPE && VK_CONTROL))
 		// {
 		// 	GlobalRunning = false;
@@ -169,13 +154,11 @@ int main()
       Buffer.Height = GlobalBackbuffer.Height;
       Buffer.BytesPerPixel = GlobalBackbuffer.BytesPerPixel;
 
-      if(Game.UpdateAndRender)
-		{
+      if(Game.UpdateAndRender){
 			Game.UpdateAndRender(&Buffer);
       }
    }
 	
 	destroy_Window();
-	
    return(0);
 }

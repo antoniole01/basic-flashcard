@@ -1,0 +1,269 @@
+**Exam 3
+
+ ~
+Name cells of Nervous Tissue
+
+neuron(nerve cell)
+glial cell
+
+ ~
+3 tracts
+
+association
+commissurral
+projection
+
+ ~
+define -
+association tract, commissural tract, projection tract
+precentral gyrus, central sulcus, postcentral gyrus
+
+within the same hemisphere
+between corpus collosum, ant/post commissures
+cortext to inferior brain
+-
+frontal lobe, between frontal and parietal, parietal lobe
+
+ ~
+describe how a chemical synapse occurs
+
+At a chemical synapse, an action potential triggers the presynaptic
+neuron to release neurotransmitters. These molecules bind to receptors
+on the postsynaptic cell and make it more or less likely to fire an
+action potential.
+
+ ~
+What are 3 functions of nervous tissue.
+
+Tissue
+ Responsible for control; information processing, storage, and retrieval;
+ internal communication.
+System
+ Collects information, process and evaluates information, initiates response
+ to information.
+
+ ~
+choroid plexus, blood brain barrier, csf, myelination
+
+choroid plexus
+ Creates the cerebral spinal fluid in each ventricle.
+bbb
+ Where nervous tissue is protected and circulated, which strictly regulates
+ what substance can enter the interstitial fluid of the brain. Keeps the
+ neurons in the brain from being exposed to some normal substance, certain
+ drugs, waste products in the blood, and variations in levels of normal
+ substance that could adversely affect the brain.
+csf 
+ A clear colorless liquid that circulates in the ventricles and subarachnoid
+ space.
+myelination 
+ Process by which part of an axons is wrapped with a myelin sheath.
+
+ ~
+Anatomy of UNI, BI, MULTI
+
+MOST COMMON -A single short cell ext. like a T that results in 2 process from
+ one axon.
+LEAST COMMON-2 nerve process extend from the cell body.
+VERY COMMON -multiple nerve cell processes extend from cell body: typically
+ one axon, many dendrites.
+
+ ~
+sensory, motor, interneuron
+
+nerve impulse from body to cns
+nerve impulse from cns to muscle/glands
+communicates between neurons in cns motor/sensory
+
+ ~
+somatic motor, autonomic motor, sensory
+
+anterior horn. Multipolar motor neurons send information to voluntary muscles
+lateral horn. Multipolar motor neurons send information to involuntary muscles
+ in the sympathetic nervous system
+posterior horn. Multipolar interneurons that receive information f. sen neurons
+
+ ~
+astrocyte, ependymal-cell, microgial-cell, oligodendrocyte
+
+astrocyte
+ helps form blood brain barrier, regulates tissue fluid, supports and
+ organizes the cns, replaces damaged neurons, assists w/ neural development,
+ helps regulate synapse transmission
+ependymal cell
+ cilliated cuboidal, creates csf, ependymal cells + bv's, choroid plexus,
+microglial cell
+ smallest in size + #, cleans, phagocytic-removes debris from dead/dying cells
+oligodendrocyte
+ wrap around many axons, form myelin sheath, filled w/ lipids, white in color
+
+ ~
+satellite-cell, neurolemmocyte
+
+protects and regulates nutrients for cell bodies in ganglia.
+myelinates and insulates pns axons, allows for faster nerve impulse
+ conduction through the axon.
+
+ ~
+list functions of csf
+
+clear colorless liquid that circulates in the ventricles and subarachnoid
+space. buoyancy, protection, environmental stability.
+
+ ~
+gustation pathway
+
+cn vii facial
+1.taste:anterior 2/3: gustatory cells CN VII
+2.pons
+3.thalamus
+4.primary gustatory cortex(insula)
+
+ ~
+gustation pathway
+
+cn ix glossopharyngeal
+1.posterior 1/3: gustatory cells CN IX
+2.jugular foramen
+3.medulla oblongota
+4.thalamus
+5.primary gustatory cortex(insula)
+
+ ~
+olfaction pathway
+
+1.olfactory cells enter
+2.cribiform foramina
+3.olfactory bulb
+4.olfactory tracts
+5.olfactory cortex of the temporal bone
+
+ ~
+vision pathway
+
+1.photoreceptors-bipolar cells-ganglian cells
+2.optic nerve
+3.optich chiasm (dessucation)
+4.optic tract
+5.(superior colliculi) thalamus
+6.primary visual cortex of occipital bone
+
+ ~
+equillibrium pathway
+
+cn8 vestibulochoclear sensory equillibrium
+hair cells - crista ampularis of macula - vestibular branch - iam
+medulla oblongota - cerebellum
+
+ ~
+hearing pathway
+
+hearing, hair cells - basilar membrane - 
+
+ ~
+location of ventricles
+
+lateral           - within cerebral hemispheres
+4th               - between thalamus halves
+cerebral aqueduct - brainstem
+3rd               - pons and cerebellum
+
+ ~
+list the primary-secondary-adult stucture of the brain
+
+protencephalon   telencephalon  cerebrum      fron.par.temp.oci.insula
+                 diancephalon   diacenphelon  epithalamus thal. hypoth.
+mesencephalon    mesencephalon  mesencephalon cerebral pend, inf/sup collic
+rhombenccephalon metencephalon  brainstem     pons cerebellum
+                 myelencephalon brainstem     medulla ablongata
+
+ ~
+Location of Dural Septum/Dural Sinus
+ falx cerebri
+ tentorium cerebelli
+ falx cerebelli
+ diaphragma sellea
+
+longitudinal fissure(between cerebral hemispheres)
+  superior/inferior sagittal sinus
+transverse fissure(between cerebrum & cerebellum)
+  straight sinus(medial)/transverse sinus(lateral)
+between cerebellar halves(near vermis)
+  occipital sinus
+covers pituitary gland in sella turcica
+  cavernous sinus
+
+ ~
+2 functions of the spinal cord
+
+1.pathway for sensory and motor impulse
+2.responsible for reflexes, quickest reaction to stimulus
+
+ ~
+conus medullaris, cauda equina, filum terminale
+
+*cervial enlargement - motor upper limbs
+conus medullaris - l1 cone shaped end of spinal cord
+cauda equina - bundle of nerves, extend inf. from conus medullaris
+filum terminale - thin strand of pia mater that anchors to coccyx
+
+ ~
+denticulate ligaments, ascending and descending tract
+
+dent lig. - triangular ext. of spinal pia mater, atach dura matter
+            stabalizes spinal cord tranversely, each vertebrae
+anscen tracts, bundle of axons that send sensory info to spinal card
+descen tracts, bundle of axons that send motor   info to spinal card
+
+ ~
+plexus, intercostal nerve, reflexes
+
+plexus - network of interweaving rami
+intercostal nerve - anterior rami of spinal nerves t2-t11
+reflexes - rapid autonomic involuntary reaction of muscles or glands
+
+ ~
+monosynaptic, polysnaptic, ipsilateral, contralateral
+
+1 synapse between sensory and motor(fastest)
+many synapses between sensory and interneuron, interneuron and motor
+
+receptor and effector on same side
+receptor and effector on opposite sides
+
+ ~
+sympathetic trunk
+
+beaded necklace-like structure for sympathetic neurons to travel within
+
+ ~
+Receptor, Stimulus, sensation, transducer, gustatory cells, olfactory cell
+taste buds, vallate papilla, rods and cones, fovea centralis, optic disc
+perilymph, endolymph
+
+receptors - receive sensory information
+stimulus - external/internal change and processed as senory information
+sensation - conscious awareness of sensory information
+transudcers - change from one form to another, stimuli-electrical
+
+ ~
+ 
+
+ 
+
+ ~
+ 
+
+ 
+
+ ~
+ 
+
+ 
+
+ ~
+end
+
+end
+
+ ~

@@ -15,6 +15,10 @@
 #pragma warning(disable:4101)
 #pragma warning(disable:4505)
 
+// window // 0 -- right, 1 -- middle, 2 -- left
+
+#define WIN RI
+
 bool FF = 0;
 
 #define FPS 33
@@ -23,10 +27,30 @@ int window_width = 1920;
 int window_height = 1080;
 int fontscale = 20*2;
 
-static bool running_within;
 static int do_once = 0;
 bool front = false;
 bool back = true;
+static bool centerwindow = false;
+
+static bool show_index[100] = {1};
+
+int maximu_index_cards[255];//1000];
+
+int index_card_first   = -1;
+int index_card_current = 0;
+int index_card_last    = 256;//1001;
+
+// FileSave FileLoad System
+
+std::ifstream file_load;
+std::ofstream file_save;
+
+std::string file_num;
+
+static int total_number_of_index_cards = 0;
+int total_cards = 0;
+static int max_cards = 0;
+
 
 enum index {START_PAGE,
 				
@@ -43,66 +67,22 @@ enum index {START_PAGE,
 				
 				END_PAGE};
 
-int current_index = INDEX_1;
+int current_index;// = INDEX_1;
 bool flip = back;
+static int loop_once = 0;
 
 int num_of_newlines = 0;
 
-#define NCOL WHITE
+#define NCOL TE
 
-internal void draw_index_card(int num_lines, std::string s1, std::string s2, std::string s3, std::string s4, std::string s5, std::string s6){
-	int x = window_width/2;
-	int y = window_height/2;
-	
-	
-	
-	if(num_lines == 1)
-	{
-		drawFontSolid(1,1,0, x,y, s1.c_str(), NCOL,TAHOMA,fontscale);
-	}
-	else if(num_lines == 2)
-	{
-		drawFontSolid(1,1,0, x,y-fontscale+(fontscale/2), s1.c_str(), NCOL,TAHOMA,fontscale);
-		drawFontSolid(1,1,0, x,y+(fontscale/2),           s2.c_str(), NCOL,TAHOMA,fontscale);
-	}
-	else if(num_lines == 3)
-	{
-		drawFontSolid(1,1,0, x,y-fontscale, s1.c_str(), NCOL,TAHOMA,fontscale);
-		drawFontSolid(1,1,0, x,y,           s2.c_str(), NCOL,TAHOMA,fontscale);
-		drawFontSolid(1,1,0, x,y+fontscale, s3.c_str(), NCOL,TAHOMA,fontscale);
-	}
-	else if(num_lines == 4)
-	{
-		drawFontSolid(1,1,0, x,y-(fontscale/2)-(fontscale), s1.c_str(), NCOL,TAHOMA,fontscale);
-		drawFontSolid(1,1,0, x,y-(fontscale/2),             s2.c_str(), NCOL,TAHOMA,fontscale);
-		drawFontSolid(1,1,0, x,y+(fontscale/2),             s3.c_str(), NCOL,TAHOMA,fontscale);
-		drawFontSolid(1,1,0, x,y+(fontscale/2)+(fontscale), s4.c_str(), NCOL,TAHOMA,fontscale);
-	}
-	else if(num_lines == 5)
-	{
-		drawFontSolid(1,1,0, x,y-(fontscale*2), s1.c_str(), NCOL,TAHOMA,fontscale);
-		drawFontSolid(1,1,0, x,y-fontscale,     s2.c_str(), NCOL,TAHOMA,fontscale);
-		drawFontSolid(1,1,0, x,y,               s3.c_str(), NCOL,TAHOMA,fontscale);
-		drawFontSolid(1,1,0, x,y+fontscale,     s4.c_str(), NCOL,TAHOMA,fontscale);
-		drawFontSolid(1,1,0, x,y+(fontscale*2), s5.c_str(), NCOL,TAHOMA,fontscale);
-	}
-	else if(num_lines == 6)
-	{
-		drawFontSolid(1,1,0, x,y-(fontscale/2)-(fontscale*2), s1.c_str(), NCOL,TAHOMA,fontscale);
-		drawFontSolid(1,1,0, x,y-(fontscale/2)-(fontscale),   s2.c_str(), NCOL,TAHOMA,fontscale);
-		drawFontSolid(1,1,0, x,y-(fontscale/2),               s3.c_str(), NCOL,TAHOMA,fontscale);
-		drawFontSolid(1,1,0, x,y+(fontscale/2),               s4.c_str(), NCOL,TAHOMA,fontscale);
-		drawFontSolid(1,1,0, x,y+(fontscale/2)+(fontscale),   s5.c_str(), NCOL,TAHOMA,fontscale);
-		drawFontSolid(1,1,0, x,y+(fontscale/2)+(fontscale*2), s6.c_str(), NCOL,TAHOMA,fontscale);
-	}
-	else
-	{
-		printf("error\n");
-	}
-}
+internal std::string int_to_string(int value);
+internal char * int_to_char(int value);
+internal const char * int_t_c(int value);
+
 internal void draw_title(std::string title){
 	drawFontSolid(0,0,0, 0+10,0, title.c_str(), 0,128,255,255, TAHOMA,fontscale);
 }
+
 internal void icon(){
 
 	SDL_Surface *surface;     // Declare an SDL_Surface to be filled in with pixel data from an image file
@@ -114,6 +94,9 @@ internal void icon(){
 		0x0fff, 0x0fff, 0x0fff, 0x0fff, 0x0fff, 0x0fff, 0x0fff, 0x0fff,
 		0x0fff, 0x0fff, 0x0fff, 0x0fff, 0x0fff, 0x0fff, 0x0fff, 0x0fff,
 		0x0fff, 0x0aab, 0x0789, 0x0bcc, 0x0eee, 0x09aa, 0x099a, 0x0ddd,
+		\
+		\
+		
 		0x0fff, 0x0eee, 0x0899, 0x0fff, 0x0fff, 0x1fff, 0x0dde, 0x0dee,
 		0x0fff, 0xabbc, 0xf779, 0x8cdd, 0x3fff, 0x9bbc, 0xaaab, 0x6fff,
 		0x0fff, 0x3fff, 0xbaab, 0x0fff, 0x0fff, 0x6689, 0x6fff, 0x0dee,
@@ -143,305 +126,681 @@ internal void icon(){
 	surface = SDL_CreateRGBSurfaceFrom(pixels,16,16,16,16*2,0x0f00,0x00f0,0x000f,0xf000);
 
 	SDL_SetWindowIcon(window, surface);
-	
 }
 
+// Fullscreen : Sets Windows Fullscreen on Windowed Mode
+internal void fullscreen(){
+	
+	int fontS = 15;
+	if(FF){
+		window_width = 800;
+		window_height = 600;
+		fontscale = fontS;
+		SDL_SetWindowSize(window,window_width,window_height);
+	}
+	else{ // Windows is Not in Fullscreen
+		window_width = 1920;
+		window_height = 1080;
+		fontscale = fontS*2;
+		SDL_SetWindowSize(window,window_width,window_height);
+	}
+}
+
+// Minimized : Minimizes on Middle Mouse Button Click
 bool Minimized;
 int minimize_once = 0;
 
-internal void fullscreen(){
-	if(FF)
-	{
-		window_width = 800;
-		window_height = 600;
-		fontscale = 20;
-		SDL_SetWindowSize(window,window_width,window_height);
-		//SDL_SetWindowPosition(window,x_pos,y_pos);
-		//SDL_SetWindowFullscreen(window,0);//SDL_WINDOW_FULLSCREEN, SDL_WINDOW_FULLSCREEN_DESKTOP or 0
-	}
-	else
-	{
-		window_width = 1920;
-		window_height = 1080;
-		fontscale = 20*2;
-		SDL_SetWindowSize(window,window_width,window_height);
-		//SDL_SetWindowPosition(window,0,0);
-		//SDL_SetWindowFullscreen(window,SDL_WINDOW_FULLSCREEN_DESKTOP);
-	}
-	
-}
 internal void minimized(){
-	if(Minimized == 1 && minimize_once == 0)
-	{
+	if(Minimized == 1 && minimize_once == 0){
 		SDL_MinimizeWindow(window);
 		minimize_once = 1;
 	}
-	if(Minimized == 0 && minimize_once == 1)
-	{
+	if(Minimized == 0 && minimize_once == 1){
 		SDL_MinimizeWindow(window);
 		minimize_once = 0;
 	}
 }
-internal void createwindow(){
 
-	int window_x_pos = 900;
-	int window_y_pos = 450;
-	window_x_pos = 0;
-	window_y_pos = 0;
+int window_x_pos = 0;
+internal void createwindow(){
 	
-	char title[100] = "Index Card - Learning Helper"; // set title of window
+	if(!centerwindow)window_x_pos = 0;//900; // leftwindow
+	else window_x_pos = 1920;                // centerwindow
 	
-	if(do_once == 0)
-	{
+	int window_y_pos = 0;//450;
+	char title[100] = "Index Card 2 - Learning Helper"; // set title of window
+	if(do_once == 0){
 		destroy_Window();
 		icon();
-#if FULLSCREEN == 0
 		init_Window(title,"0",window_x_pos,window_y_pos, window_width,window_height, 0,1); // fullscreen not stretched, not glitchy
-#elif FULLSCREEN == 1
-		init_Window(title,"0",window_x_pos,window_y_pos, window_width,window_height, 0,0); //window mode
-		//init_Window(title,x_pos,y_pos, width,height, 2,0); //window fullscreen resolution stretched, glitchy
-#endif
+		if(!centerwindow){}
+		else SDL_SetWindowFullscreen(window,SDL_WINDOW_FULLSCREEN_DESKTOP);
 	}
 	do_once = 1;
-
 }
-internal void input(){
-	while(POLLEVENT)
-	{
-		if(QUIT){exit(0);}
-		if(DOWNPRESS)
-		{
-			
-			if(ESCAPE)  {exit(0);}
-			
-			if(DOWN)    {current_index--;flip=true; }
-			if(UP)      {current_index++;flip=true; }
-			if(LEFT)    {current_index--;flip=true; }
-			if(RIGHT)   {current_index++;flip=true; }
-			
-			if(SPACE)   {flip=!flip;                }
 
-			if(PAGEUP)  {current_index += 10;       }
-			if(PAGEDOWN){current_index -= 10;       }
+internal void current_index_show(int input){
+
+	switch(input){
+		case(0):{
+			if(show_index[current_index] == true){
+				current_index--;
+				flip=true;
+			}
+			else{
+				current_index--;
+				flip=true;
+			}
+		}return;
+		case(1):{
+			if(show_index[current_index] == true){
+				current_index++;
+				flip=true;
+			}
+			else{
+				current_index++;
+				flip=true;
+			}
+		}return;
+		//LEFT
+		case(2):{
+			do{
+				current_index--;
+				flip=true;
+			}while(show_index[current_index] == true);
+		}return;
+		//RIGHT
+		case(3):{
+			do{
+				current_index++;
+				flip=true;
+			}while(show_index[current_index] == true);
+			if(show_index[max_cards-1] == true) current_index = 0;
+		}return;
+	}
+}
+
+bool p_down = false;
+bool ctrl_down = false;
+bool o_down = false;
+bool ctrl_o_cube = false;
+bool one_down = false;
+bool two_down = false;
+bool three_down = false;
+
+int fname = 1;
+
+static bool card_was_learned = false;
+bool withinBounds = false;
+
+internal void input(){
+	while(POLLEVENT){
+		if(QUIT){exit(0);}
+		if(DOWNPRESS){
 			
-			if(HOME)    {current_index = END_PAGE;  }
-			if(END)     {current_index = START_PAGE;}
+			if(ESCAPE)   {
+				file_save.open("..//src//p1.dat");                                      // saves file on escape // open file
+				file_save << fname << " " << flip << " " << current_index << std::endl; // saves - file, flip, and current index
+
+				for(int i = 0; i < 100; i++){
+					file_save << show_index[i] << " ";
+				}
+				file_save.close();
+				exit(0);
+			}
 			
-			if(ONE)     {current_index = INDEX_1;   }
-			if(THREE)   {current_index = INDEX_15;  }
-			if(FIVE)    {current_index = INDEX_25;  }
-			if(SEVEN)   {current_index = INDEX_40;  }
-			if(ZERO)    {current_index = INDEX_50;  }
+			if(UP)       {flip=!flip;}
+			if(DOWN){
+				show_index[current_index] = true;
+				do{
+					current_index++;
+				}while(show_index[current_index] == true);
+				if(show_index[current_index] == false && current_index == max_cards) current_index = 0;
+			}
+			if(LEFT)     {current_index_show(2);}
+			if(RIGHT)    {current_index_show(3);}
+			if(SPACE)    {flip=!flip;           }
 			
-			if(F12_KEY) {FF=!FF;}
+			if(BACKSPACE){
+				show_index[current_index] =! show_index[current_index];
+				//if(show_index[current_index+1] == false){}
+				current_index++;
+			}
 			
-			if(P_KEY) {}
+			if(PAGEUP)   {current_index += 10;}
+			if(PAGEDOWN) {current_index -= 10;}
+			
+			if(HOME)     {current_index = START_PAGE;}
+			if(END)      {current_index = END_PAGE;  }
+			
+			if(ONE)      {one_down = true; current_index = INDEX_1;}
+			if(TWO)      {two_down = true; current_index = INDEX_1;}
+			if(THREE)    {three_down = true; /*current_index = INDEX_15;*/}
+			if(FIVE)     {current_index = INDEX_25;}
+			if(SEVEN)    {current_index = INDEX_40;}
+			if(ZERO)     {current_index = INDEX_50;}
+			
+			if(F12_KEY)  {FF=!FF;}
+			
+			if(LCTRL)    {ctrl_down = true;}
+			if(O_KEY)    {o_down = true;   }
+			if(P_KEY)    {p_down = true;   }
+			if(I_KEY)    {                                                              // on "I" key save file
+				file_save.open("..//src//p1.dat");
+				file_save << fname << " " << flip << " " << current_index << std::endl;
+
+				for(int i = 0; i < 100; i++){
+					file_save << show_index[i] << " ";
+				}
+				file_save.close();
+				printf("data saved.\n");
+			}
+			
+			if(ONE_NUMPAD||M_KEY     ){current_index = START_PAGE+1;}                                     // 1 - start page
+			if(TWO_NUMPAD||COMMA     ){                                                                   // 2 - memorized
+				show_index[current_index] = true;
+				do{
+					current_index++;
+				}while(show_index[current_index] == true);
+				if(show_index[current_index] == false && current_index == max_cards) current_index = 0;
+			}
+			
+			if(THREE_NUMPAD||PERIOD  ){current_index = max_cards;}                                        // df3 - end
+			if(FOUR_NUMPAD ||J_KEY   ){current_index_show(2);}                                            // 4 - left  <-
+			if(FIVE_NUMPAD ||K_KEY   ){flip=!flip;}                                                       // 5 - flip
+			if(SIX_NUMPAD  ||L_KEY   ){current_index_show(3);}                                            // 6 - right ->
+			if(EIGHT_NUMPAD||I_KEY   ){do_once=0;centerwindow=!centerwindow;}                             // 8 - centerwindow
+			if(PERIOD_NUMPAD         ){                                                                   // . - save
+				file_save.open("..//src//p1.dat");
+				file_save << fname << " " << flip << " " << current_index << std::endl;
+
+				for(int i = 0; i < 100; i++){
+					file_save << show_index[i] << " ";
+				}
+				file_save.close();
+				exit(0);
+			}
+			
+			if(SEVEN_NUMPAD   ){}
+			if(NINE_NUMPAD    ){}
+			if(NUMLOCK_NUMPAD	){}
+			if(DIVIDE_NUMPAD  ){}
+			if(MULTIPLY_NUMPAD){}
+			if(MINUS_NUMPAD	){}
+			if(PLUS_NUMPAD		){}
+			if(ENTER_NUMPAD	){}
 		}
-		if(UPPRESS){}
-		if(MOUSEWHEEL)
-		{
-			if(e.wheel.y > 0){ current_index++;}
-			if(e.wheel.y < 0){ current_index--;}
+		if(UPPRESS){
+			if(LCTRL)    {ctrl_down  = false;}
+			if(ONE)      {one_down   = false;}
+			if(TWO)      {two_down   = false;}
+			if(THREE)    {three_down = false;}
+			if(O_KEY)    {o_down     = false;}
+			
+			if(EQUALS) {
+				fname++;
+				loop_once = 0;
+				max_cards = 0;
+			}
+			if(MINUS)  {
+				fname--;
+				loop_once = 0;
+				max_cards = 0;
+			}
+			
+			if(P_KEY){ p_down = false; }
+			if(BACKQUOTE){                                                 // ~ - reset memorized cards
+				for(int i = 0; i <= 100; i++){
+					show_index[i] = false;
+				}
+			}
+			
+			if(TWO_NUMPAD)  {            //card learned
+				card_was_learned = true;
+			}
+			if(SEVEN_NUMPAD||U_KEY){
+				fname--;
+				loop_once = 0;
+				max_cards = 0;
+			}
+			if(NINE_NUMPAD||O_KEY) {
+				fname++;
+				loop_once = 0;
+				max_cards = 0;
+			}
+			if(NUMLOCK_NUMPAD	){
+				for(int i = 0; i <= 100; i++){                           // set to index to 0
+					show_index[i] = false;
+				}
+				current_index = 0;
+			}
+			
+			if(ONE_NUMPAD     ){}
+			if(THREE_NUMPAD   ){}
+			if(FOUR_NUMPAD    ){}
+			if(FIVE_NUMPAD    ){}
+			if(SIX_NUMPAD     ){}
+			if(EIGHT_NUMPAD   ){}
+			if(DIVIDE_NUMPAD	){}
+			if(MULTIPLY_NUMPAD){}
+			if(MINUS_NUMPAD	){}
+			if(PLUS_NUMPAD		){}
+			if(ENTER_NUMPAD	){}
+			if(PERIOD_NUMPAD	){}
 		}
-		
-		if(LEFTMOUSEBUTTON)     {}
+	}
+
+	// MOUSE BUTTON CONTROLLS
+	if(MOUSEMOTION){
+		int x, y;
+		SDL_GetMouseState(&x,&y);
+		if(x >= 400 && x <= 1500 &&
+			y >= 250 && y <= 800){
+			withinBounds = true;
+			//printf("inside\t");
+		}
+		else withinBounds = false;
+	}
+	
+	if(MOUSEWHEEL){
+		if(e.wheel.y > 0){ current_index_show(2);}
+		if(e.wheel.y < 0){ current_index_show(3);}
+	}// mouse wheel
+	
+	bool isdown = false;
+	static int pressedonce = 0;
+	if(MOUSEBUTTONDOWN){
+		if(LEFTMOUSEBUTTON)     {
+			isdown = true;
+			pressedonce = 0;
+		}
+		if(RIGHTMOUSEBUTTON){flip=!flip;}
+	}
+	if(MOUSEBUTTONUP){
+		if(LEFTMOUSEBUTTON)     {
+			
+			// int x, y;
+			// SDL_GetMouseState(&x,&y);
+			// if(x >= 400 && x <= 1500 &&
+			// 	y >= 250 && y <= 800 &&
+			// 	isdown == false && pressedonce == 0)
+			// 	if(withinBounds == true){
+			// 		flip=!flip;
+			// 	}
+			// pressedonce++;
+		}
 		if(RIGHTMOUSEBUTTON)    {}
 		if(MIDDLEMOUSEBUTTON)   {Minimized = !Minimized;}
 	}
+}
+
+internal std::string int_to_string(int value){
+	char buffer[5000];
+	std::string s = itoa(value, buffer, 10);
+	return s;
+}
+
+#pragma warning(disable:4172)
+internal char * int_to_char(int value){
+	std::string buffer = "";
+	char str[1024];
+	buffer += itoa(value, str, 10);
+	return str;
+}
+
+internal const char * int_t_c(int value){
+	// 1ST ATTEMPT, WORKS IN MAIN, BUT DOESN'T WORK IN FUNCTION(IDK), MAYBE MEMORY IS SHUFFLED?
+	std::stringstream strs;
+	strs << value;
+	std::string temp_str = strs.str();
+	char const *pchar = temp_str.c_str();
+	return pchar;
+}
+
+// Prints String to the Console Window
+
+internal void drawpl(std::string sentence){
+	std::stringstream ss(sentence);
+	std::string to;
+	std::string sa[10];
+	internal int i = 0;
+	while(std::getline(ss,to,'\n')){
+		sa[i] = to;
+		//std::cout << i << ":\t" << sa[i] << std::endl;
+		i++;
+	}
+	//printf("%i\n",i);
+}
+
+// Index Card Info
+internal void index_card_overlay_info(){
+	char buff[30];
+	
+	drawFillRect(40,20,1920-80,1080-35,  10,10,40,10,  0);
+	
+	// Background
+	if(flip) drawFillRect(40,20,1920-80,1080-35,  10,10,40,10,  0); // blue bg
+	else     drawFillRect(40,20,1920-80,1080-35,  40,10,10,10,  0); // red bg
+	
+	// Draw Current Index Card Number
+	drawFontSolid(1,1,0, 100,50, itoa(current_index,buff,10), CYAN,TAHOMA,fontscale, 40,40,40,125); // Index #
+	
+	// Draw Front and Back -Label
+	if(flip) drawFontSolid(1,1,0, 1920/2,1080-60, "FRONT", 0,0,150,255,TAHOMA,fontscale*3);     // FRONT
+	else     drawFontSolid(1,1,0, 1920/2,1080-60, "BACK",  255,100,100,100,TAHOMA,fontscale*3); // BACK
+
+
+	// Draw Cards Studied(Memorized)
+	int num_memorized = 0;
+	for(int i = 1; i < 100; i++){                       // index[i] ++
+		if(show_index[i] == true)num_memorized++;
+	}
+	std::string ns = int_to_string(num_memorized) + " of " + int_to_string(max_cards-1) + " Studied";
+	if(num_memorized == max_cards-1)
+		drawFontSolid(1,1,0,1920-240,60, "-- Study Complete -- ",GREEN,TAHOMA,fontscale); // Quantity
+	else
+		drawFontSolid(1,1,0, 1920-220,60, ns.c_str(),  0,125,125,255,TAHOMA,fontscale); // Quantity
+
+	drawFontSolid(1,1,0, 100,100, "test",  0,125,125,255,TAHOMA,fontscale); // Quantity
+	
+
 	
 }
-internal void glyph_data(){
-	// int minx, maxx, miny, maxy, advance;
-	// if(TTF_GlyphMetrics(gFont, 'g', &minx, &maxx, &miny, &maxy, &advance)==-1)
-	// {
-	// 	printf("Error %s\n",TTF_GetError());
-	// }
-	// else
-	// {
-	// 	printf("minx %d", minx);
-	// }
-	
+
+static int doit = 0;
+static bool f1 = false;
+static bool f2 = false;
+static bool f3 = false;
+
+// fileslist
+const int max_files = 16;
+
+SDL_Point getsize(SDL_Texture *texture){
+	SDL_Point size;
+	SDL_QueryTexture(texture, NULL, NULL, &size.x, &size.y);
+	return size;
 }
+
 internal void draw(){
-	int scale = 25;
-	int size = 0;
+
+	
 	int x = window_width/2;
 	int y = window_height/2;
-	int w = scale;
-	int h = scale;
-	int centertype = 0;
-	int heighttype = 0;
-	int fontstyle = 4;
-
-	// GET INPUT-FILE
-	std::ifstream input("..//src/file3.txt");
 	
-	std::string line;
-	int file_num_lines = 0;
-	std::string str_ar[1000];
+	// Load Input File
+	// Languages // Jap // Kor // Fre // 
 
-	// WRITE FILE TO STRING
-	while(std::getline(input,line))
-	{
-		std::stringstream ss(line);
-		//std::getline(ss, str_ar[file_num_lines], ':');
-		std::getline(ss, str_ar[file_num_lines]);
-		file_num_lines++;
+	std::string filename;
+	
+	int maxfiles[max_files];
+	
+	std::string buffer;
+	std::string lline;
+	while(file_load >> fname){}
+
+	if(fname <= 1)fname = 1;
+	if(fname >= max_files)fname = max_files;
+
+	// TODO: Change max_files after adding more fileslist
+	switch(fname){
+		case 1:filename = "..//src//exam10.txt";         file_num = "1";break;
+		case 2:filename = "..//src//nursing.txt";        file_num = "2";break;
+		case 3:filename = "..//src//jap.txt";            file_num = "3";break;
+		case 4:filename = "..//src//kor.txt";            file_num = "4";break;
+		case 5:filename = "..//src//chi.txt";            file_num = "5";break;
+		case 6:filename = "..//src//fre.txt";            file_num = "6";break;
+		case 7:filename = "..//src//bio.txt";            file_num = "7";break;
+		case 8:filename = "..//src//b-ap.txt";           file_num = "8";break;
+		case 9:filename = "..//src//nursing-terms.txt";  file_num = "9";break;
+		case 10:filename = "..//src//nursing-terms2.txt";file_num = "10";break;
+		case 11:filename = "..//src//nursing-terms3.txt";file_num = "11";break;
+		case 12:filename = "..//src//anatomy.txt";       file_num = "12";break;
+		case 13:filename = "..//src//ap-study.txt";      file_num = "13";break;
+		case 14:filename = "..//src//ori-ins-fun.txt";   file_num = "14";break;
+		case 15:filename = "..//src//exam 3.txt";        file_num = "15";break;
+		case 16:filename = "..//src//exam 4.txt";        file_num = "16";break;
+		default:break;
 	}
 
-	// DRAW LIMIT BOUNDS OF INDEX
-	if(current_index <= START_PAGE)
-	{
-		int off = 40;
-		drawFontSolid(1,1,0, x,y, "l/r arrow keys - moves l/r flashcards  ", MAGENTA,TAHOMA,fontscale);
-		drawFontSolid(1,1,0, x,y+(off), "pgup pgdn - moves up 10, dn 10 flashcards", MAGENTA,TAHOMA,fontscale);
-		drawFontSolid(1,1,0, x,y+(off*2), "home end - moves to 1st flashcard, last flashcard", MAGENTA,TAHOMA,fontscale);
-		drawFontSolid(1,1,0, x,y+(off*3), "spacebar - flips flashcard", MAGENTA,TAHOMA,fontscale);
+	std::ifstream input(filename);
+	std::string line;
+	int file_num_lines = 0; // set file_number_lines = 0
+
+	//TODO: Can get Overflow for string size Error
+	std::string str_ar[5000];
+	
+	// Write Content of File into String
+	while(std::getline(input,line)){
+		std::stringstream ss(line);
+		std::getline(ss, str_ar[file_num_lines]); // Stores SS(stringstream) Into str_ar
+		file_num_lines++; // "File_Num_Lines" - Gets Maximum Number Of Lines in File
+	}
+
+	// Count number of (indexes)"~" in the File
+	int tmp_max_number_of_lines = file_num_lines;
+	if(loop_once == 0){
+		for(int i = 0; i < tmp_max_number_of_lines; i++){
+			if(str_ar[i].substr(0,2) == " ~"){
+				max_cards++;
+			}
+		}
+		loop_once++;
+	}
+	
+	// Index Set Limit Bounds --
+	// Display Start Keyboard Console-Command Info
+	// Display Last Info
+	if(current_index < START_PAGE){
+		std::string infolnp =
+			"l/r - move l/r flashcards"
+			"pgup pgdn - moves up 10, dn 10 flashcards"
+			"home end - moves to 1st flashcard, last flashcard"
+			"spacebar - flips flashcard";
+		static int doonce = 0;
+		if(doonce == 0){/*drawpl(infolnp);*/}
+		doonce++;
 		current_index = START_PAGE;
 	}
-	if(current_index >= END_PAGE)
-	{
-		drawFontSolid(1,1,0, x,y, "end", MAGENTA,TAHOMA,fontscale);
-		current_index = END_PAGE;
+	
+	if(current_index >= max_cards-1){ // End Page -- Draw "End"
+		// Only prints "End"
+		//drawFontSolid(1,1,0, x,y, "end", MAGENTA,TAHOMA,fontscale);
+		current_index = max_cards-1;
 	}
-	
-	// DRAW CURRENT INDEX CARD NUMBER
-	char buff[30];
-	drawFontSolid(1,1,0, 100,50, itoa(current_index,buff,10), CYAN,TAHOMA,fontscale);
 
-	
-	// DRAW FRONT AND BACK, FONT
-	if(flip) drawFontSolid(1,1,0, 100+1500,50, "front_", CYAN,TAHOMA,fontscale);
-	else     drawFontSolid(1,1,0, 100+1500,50, "back_",  CYAN,TAHOMA,fontscale);
-	
+	// Draws Index Overlay Info
+	index_card_overlay_info();
 
-	int max_number_of_lines = file_num_lines;
+	int max_number_of_lines = file_num_lines; // max number of lines -- lines from file
 	bool bool_front = 0;
 	bool bool_back = 0;
-	// int number_of_back_loops = 0;
-	// int number_of_front_loops = 0;
 	int current_index_front = 0;
 	int current_index_back = 0;
 	
-	int total_number_of_index_cards = 0;
 	int number_of_lines = 0;
-	
-	int max_number_of_lines_in_index_front[100];
-	int max_number_of_lines_in_index_back[100];
-	
-	std::string str_front[1000];
-	for(int i = 0; i < max_number_of_lines; i++)
-	{
-		if(str_ar[i] == "#Front") total_number_of_index_cards++; // counts number of index cards in the file
-	}
-	for(int i = 0; i < max_number_of_lines; i++)
-	{
-		if(str_ar[i] == "#Front")
-		{
-			i++;
-			bool_front = true;
-		}
-		
-		if(str_ar[i] == "#/Front")
-		{
-			bool_front = false;
-			current_index_front++;
-			max_number_of_lines_in_index_front[current_index_front] = number_of_lines;
-			number_of_lines = 0;
-		}
-		if(bool_front)
-		{
-			number_of_lines++;
-		}
 
-		
-		if(str_ar[i] == "#Back")
-		{
+	// max size of lines
+	int max_number_of_lines_in_index_front[1000];
+	int max_number_of_lines_in_index_back[1000];
+	int total_cards = 0;
+
+	// Goes Through the File and Gives Index Array of Number of Lines
+	// in Front & Back of Index to Front_Array & Back_Array
+	// Stores Number of Lines in Index Back & Front for Font Rendering
+	//std::cout << system("CLS") << std::endl;
+	
+	for(int i = 0; i < max_number_of_lines; i++){ // Goes Through the Whole File
+		if(str_ar[i].substr(0,2) == "**"){i+=2;} // Skip Main Title "*" // Dont Need this bcs Search
+		if(str_ar[i].substr(0,2) == " ~"){ //if(str_ar[i].find(" ~") == std::string::npos){
+			bool_back = false;
+			i++; // skips "#Front" line
+			bool_front = true; // sets bool_front true
+			total_cards++;
+		}
+		if(bool_front){ // number_of_lines in front -- number of lines is reset on #/Front
+			number_of_lines++; // Gives me the Number of Lines in Front
+		}
+		if(str_ar[i] == "" && bool_front == true){
+			bool_front = false; // Stops Counting Number of Lines in #Front Sets False
+			max_number_of_lines_in_index_front[current_index_front] = number_of_lines; // Parses Array of Number of -Front Idx -Lines
+			current_index_front++; // Goes To Next Array to Store -NumberOfLines-
+			number_of_lines = 0; // Resets Number for Back Array
+
 			i++;
 			bool_back = true;
 		}
-		if(str_ar[i] == "#/Back")
-		{
-			bool_back = false;
-			current_index_back++;
-			max_number_of_lines_in_index_back[current_index_back] = number_of_lines;
-			number_of_lines = 0;
-		}
-		if(bool_back)
-		{
+		if(bool_back){
 			number_of_lines++;
 		}
+		if(str_ar[i] == "" && bool_back == true){
+			bool_back = false;
+			current_index_back++;
+			max_number_of_lines_in_index_back[current_index_back] = number_of_lines; // Parses Array of Number of -Back Idx -Lines
+			number_of_lines = 0;
+		}
+		total_number_of_index_cards = total_cards+1;
 	}
-	
-	current_index_front = 0;
-	current_index_back = 0;
 
-	for(int i = 0; i < max_number_of_lines; i++)
-	{
-		if(str_ar[i] == "#Front")
-		{
+	current_index_front = 0; //reset value
+	current_index_back  = 0; //reset value
+
+	// Renders Index Card Text & Aligns to Previous -ForLoop Height
+	for(int i = 0; i < max_number_of_lines; i++){
+		if(i == max_number_of_lines){}
+		if(str_ar[i].substr(0,2) == "**"){i+=2;} // Skip Main Title // Don't Need this bcs Search
+		if(str_ar[i].substr(0,2) == " ~"){ //if(str_ar[i].find(" ~") == std::string::npos){
+			bool_back = false;
 			i++; // skips "#Front"  line
 			bool_front = true; // sets bool_front true
-		}
-		if(str_ar[i] == "#/Front")
-		{
-			bool_front = false; // sets bool_front false
-			current_index_front++; // loops index cards
 			number_of_lines = 0;
 		}
-		if(bool_front)
-		{
-			if(flip)
-			{
-				if(current_index == current_index_front+1) // loops index cards
-				{
-					drawFontSolid(1,1,0, x, y+(fontscale*number_of_lines)-((fontscale*max_number_of_lines_in_index_front[current_index_front+1])/2),  str_ar[i].c_str(), CYAN,TAHOMA,fontscale);
-					//drawFillRect( x,y+(fontscale*number_of_lines)-((fontscale*max_number_of_lines_in_index_front[current_index_front+1])/2), 10,10, 0,0,0,0, 0);
-				}
-				number_of_lines++;
-			}
-		}
+		if(str_ar[i] == "" && bool_front == true){
+			bool_front = false;
+			current_index_front++;
+			number_of_lines = 0;
 
-		if(str_ar[i] == "#Back")
-		{
 			i++;
 			bool_back = true;
 		}
-		if(str_ar[i] == "#/Back")
-		{
+
+		int fi = 0; // font indentation
+		int fix = x - 400; // font indentation x_position
+
+		if(bool_front){ // If bool_front -true Draw Front Index Text
+			if(flip){
+				number_of_lines++;
+				int y_new_pos = (y+(fontscale*(number_of_lines-1)))-(((fontscale*(max_number_of_lines_in_index_front[current_index_front]-1))/2)-20);
+				// Draw Main Index Title
+				if(current_index == 0){
+					drawFontSolid(fi,1,0, fix-500, y+(fontscale*1)-100, str_ar[0].c_str(), CYAN,TAHOMA,fontscale*2);
+				}
+				if(current_index == current_index_front+1){ // loops index cards
+					// Prints Front Index -Text
+					drawFontSolid(fi,1,0, fix, y_new_pos, str_ar[i].c_str(), CYAN,TAHOMA,fontscale);
+				}
+			}
+		}
+		
+		if(str_ar[i].substr(0,2) == "" && bool_back == true){
 			bool_back = false;
 			current_index_back++;
 			number_of_lines = 0;
 		}
-		if(bool_back)
-		{
-			if(!flip)
-			{
-				if(current_index == current_index_back+1)
-				{
-					drawFontSolid(1,1,0, x, y+(fontscale*number_of_lines)-((fontscale*max_number_of_lines_in_index_back[current_index_back+1])/2),  str_ar[i].c_str(), CYAN,TAHOMA,fontscale);
-					//drawFillRect(x, y+(fontscale*number_of_lines)-((fontscale*max_number_of_lines_in_index_back[current_index_back+1])/2), 10,10, 0,0,0,0, 0);
-				}
+		
+		if(bool_back){ // If bool_back -true Draw Back Index Text
+			if(!flip){
 				number_of_lines++;
+				int y_new_pos = (y+(fontscale*(number_of_lines-1)))-(((fontscale*(max_number_of_lines_in_index_back[current_index_back+1]-1))/2)-20);
+				// Draw Main INdex 
+				if(current_index == 0){
+					//drawFontSolid(1,1,0, x, y+(fontscale*1)-100, str_ar[0].c_str(), CYAN,TAHOMA,fontscale*2);
+				}
+				if(current_index == current_index_back+1){
+					// Prints Back Index -Text
+					drawFontSolid(fi,1,0, fix, y_new_pos, str_ar[i].c_str(), CYAN,TAHOMA,fontscale);
+				}
 			}
 		}
 	}
+
+	// Draws Current Filename and Number
 	
+	int extension = 4; // ext characer 4 ".ext"
+	int directory = 9; // dir character 9 "..//src//"
+	std::string new_filename = filename.substr(directory,filename.length()-directory-extension);// Trims Filename
+	
+	drawFontSolid(0,1,0, 80,1080-50-50, file_num.c_str(), 70,70,70,255,TAHOMA,fontscale);         // Draws FileNum
+	drawFontSolid(0,1,0, 80,1080-50, new_filename.c_str(), 70,70,70,255,TAHOMA,fontscale);      // Draws FileDirectory
+	
+	// Center Square Align
+	//if(ctrl_down == true && o_down == true){ ctrl_o_cube = !ctrl_o_cube;                          }
+	if(ctrl_o_cube){                         drawFillRect(1920/2,1080/2, 4,4, 255,255,255,255,0); }
+	
+	//drawFillRect(400,250,1500-400,800-250, 50,50,50,100,0); // Square DGrey Rectangle Over Text
+
+	// if(card_was_learned == true){
+	// 	int show = 0;
+	// 	if(show <= 1000){
+	// 		drawFillRect(        1400+300-100,650+300-50,200,100, 0,155,0,255,0);
+	// 		drawFontSolid(1,1,0, 1400+300,    650+300,   "Studied",0,125,125,255,TAHOMA,fontscale);
+	// 		show++;
+	// 		card_was_learned = false;
+	// 	}
+	// }
+
+	// which is on the control tab of settings if you don't have pedals playback could be controlled using system wide hotkeycs
+
+	//int cx = SDL_QueryTexture(solidRectu)
+	//int cx = getsize(text_font);
+	//printf("gt: \t%i ",getsize(text_font).x);
+	//img.render((window_width/2)-((getsize(text_font).x)/100),window_height/2,5,5);
+
+	file_save.close();
+	file_load.close();
 }
+
+bool loadMedia(){
+	bool success = true;
+	if(!img.loadFromFile("..//src//bg.png")){
+		printf("Failed!!!\n");
+		success = false;
+	}
+	return success;
+}
+
 extern "C" GAME_UPDATE_AND_RENDER(GameUpdateAndRender){
-	running_within = true;
+
+	static int load_once = 0;
+	if(load_once == 0){
+		file_load.open("..//src//p1.dat");
+		if(file_load.is_open()){
+			file_load >> fname >> flip >> current_index;
+			for(int i = 0; i < 100; i++){                   // load file 
+				file_load >> show_index[i];
+			}
+		}
+		else{
+			printf("error\n");
+		}
+		load_once++;
+	}
 	
 	fullscreen();
 	minimized();
 	
-	createwindow();	
+	createwindow();
 	input();
 	
-	// sdl
 	SDL_SetRenderDrawColor(renderer,0,64,64,255);
 	SDL_RenderClear(renderer);
 
+	//loadMedia();
+
+	// Draw
 	draw();
+
+
+	img.free();
 	
 	SDL_Delay(1000/FPS);
 	SDL_RenderPresent(renderer);

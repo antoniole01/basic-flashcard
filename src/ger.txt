@@ -1,0 +1,173 @@
+**Japanese Language Learning
+
+ ~1
+blackboard
+
+kokuban 
+
+ ~2
+book
+
+hon
+
+ ~3
+chair
+
+isu
+
+ ~4
+chalk
+
+choku
+
+ ~5
+class
+
+jugyo
+
+ ~6
+dication
+
+kakitori
+
+ ~7
+dictionary
+
+jisho
+
+ ~8
+eraser
+
+keshigomu
+
+ ~9
+homework
+
+shukudai(shkudai)
+
+ ~10
+lecture
+
+kogi(koni)
+
+ ~11
+letter
+
+moji
+
+ ~12
+map
+
+chizu
+
+ ~13
+marker
+
+majikku
+
+ ~14
+notebook
+
+noto
+
+ ~15
+paper
+
+kami
+
+ ~16
+pen
+
+pen
+
+ ~17
+pencil
+
+empitsu
+
+ ~18
+problem
+
+mondai(monai)
+
+ ~19
+projector
+
+projeckuta
+
+ ~20
+question
+
+shitsumon
+
+ ~21
+quiz
+
+sho tesuto
+
+ ~22
+school chair
+
+gakko no isu
+
+ ~23
+school desk
+
+gakko no tsukue(tskue)
+
+ ~24
+table
+
+teburu
+
+ ~25
+test
+
+tesuto
+
+ ~26
+text
+
+keitai meru o suru
+
+ ~27
+textbook
+
+kyokasho
+
+ ~28
+whiteboard
+
+howaitobodo
+
+ ~
+comedy
+
+komedi
+
+ ~
+
+
+ ~
+
+
+ ~
+
+
+ ~
+
+
+ ~
+
+
+ ~
+
+
+ ~
+
+
+ ~
+
+
+ ~
+
